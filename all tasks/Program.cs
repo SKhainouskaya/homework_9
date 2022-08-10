@@ -1,0 +1,58 @@
+﻿/*  64: Задайте значения M и N. Напишите программу, которая выведет все
+ натуральные числа в промежутке от M до N. */
+/*  M = 1; N = 5. -> "1, 2, 3, 4, 5"
+ M = 4; N = 8. -> "4, 6, 7, 8" */
+
+  void PrintMN(int m, int n)
+ {
+     if (m == n)
+     {
+         Console.Write(n + " ");
+     }
+     else if(m < n)
+     {
+         PrintMN(m, n-1);
+         Console.Write(n + " ");
+     }
+     else
+     {
+          
+        Console.Write(m + " ");
+         PrintMN(m-1, n);
+    }
+ }
+
+Console.Write("Введите значение M: ");
+ int M = int.Parse(Console.ReadLine());
+
+ Console.Write("Введите значение N: ");
+ int N = int.Parse(Console.ReadLine());
+ PrintMN(M,N);
+ 
+ /* Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму
+туральных элементов в промежутке от M до N.
+M= 1; N = 15 -> 120      M = 4; N = 8. -> 30 
+
+int SumMN(int m, int n)
+ {
+     if (m == n)
+     {
+         return n;
+     }
+     else if (m < n)
+     {
+         return n + SumMN(m, n-1);
+     }
+     else
+     {
+         return m + SumMN(m-1, n);
+     }
+ }
+
+ Console.Write("Введите значение M: ");
+ int M = int.Parse(Console.ReadLine());
+
+ Console.Write("Введите значение N: ");
+ int N = int.Parse(Console.ReadLine());
+ Console.WriteLine($"Сумма от {M} до {N}: {SumMN(M,N)}");
+ */
